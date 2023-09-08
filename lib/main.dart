@@ -1,7 +1,22 @@
-import 'package:flutter/material.dart';
+import 'package:fluent_ui/fluent_ui.dart';
 import 'package:project_hermes/home_page.dart';
+import 'package:window_manager/window_manager.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  windowManager.ensureInitialized();
+
+  windowManager.waitUntilReadyToShow().then((_) async {
+    // add google fonts add icon change color
+    await windowManager.setTitle("Hermes News");
+    await windowManager.setTitleBarStyle(TitleBarStyle.normal);
+    await windowManager.setBackgroundColor(Colors.transparent);
+    await windowManager.setSize(const Size(755, 545));
+    await windowManager.setMinimumSize(const Size(755, 545));
+    await windowManager.center();
+    await windowManager.show();
+    await windowManager.setSkipTaskbar(false);
+  });
   runApp(const MyApp());
 }
 
@@ -10,8 +25,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(),
+    return FluentApp(
+      title: "HERMES NEWS",
+      theme: FluentThemeData(
+        brightness: Brightness.light,
+        accentColor: Colors.red,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: const HomePage(),
     );
   }
 }
