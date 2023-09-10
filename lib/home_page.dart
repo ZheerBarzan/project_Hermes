@@ -1,6 +1,7 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:project_hermes/model/article.dart';
 import 'package:project_hermes/model/article_catagory.dart';
+import 'package:project_hermes/widget/newsList.dart';
 import 'package:window_manager/window_manager.dart';
 
 class HomePage extends StatefulWidget {
@@ -67,7 +68,7 @@ class _HomePageState extends State<HomePage> with WindowListener {
             .map<NavigationPaneItem>((e) => PaneItem(
                 icon: Icon(e.iconData),
                 title: Text(e.title),
-                body: Text(pages[index].title)))
+                body: NewsListPage(newsPage: pages[index])))
             .toList(),
         onChanged: (value) {
           setState(() {

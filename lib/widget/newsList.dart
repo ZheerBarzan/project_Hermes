@@ -1,5 +1,6 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:project_hermes/model/article.dart';
+import 'package:project_hermes/widget/newsItem.dart';
 
 class NewsListPage extends StatefulWidget {
   final NewsPage newsPage;
@@ -20,10 +21,9 @@ class _NewsListPageState extends State<NewsListPage> {
               mainAxisExtent: 290,
               mainAxisSpacing: 10,
               crossAxisSpacing: 10),
+          padding: EdgeInsets.all(25),
           itemBuilder: (context, index) {
-            return Container(
-              child: Text("$index"),
-            );
+            return NewsItem();
           }),
     );
   }
