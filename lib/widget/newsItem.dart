@@ -33,6 +33,16 @@ class NewsItem extends StatelessWidget {
                       "https://www.pexels.com/photo/clouds-over-buildings-in-city-15114111"),
             ),
           ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(
+                top: 8,
+                left: 8,
+                right: 8,
+              ),
+              child: Text("Elon musk is a shmuck"),
+            ),
+          )
         ],
       ),
     );
