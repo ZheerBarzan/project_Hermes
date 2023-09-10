@@ -44,6 +44,8 @@ class _HomePageState extends State<HomePage> with WindowListener {
         title: "Health",
         iconData: FluentIcons.health,
         articleCatagory: ArticleCatagory.health),
+
+        
   ];
 
   @override
@@ -63,6 +65,7 @@ class _HomePageState extends State<HomePage> with WindowListener {
     return NavigationView(
       key: key,
       pane: NavigationPane(
+        
         selected: index,
         items: pages
             .map<NavigationPaneItem>((e) => PaneItem(
