@@ -1,5 +1,5 @@
 import 'package:fluent_ui/fluent_ui.dart';
-import 'package:project_hermes/model/article.dart';
+import 'package:project_hermes/model/news_page.dart';
 import 'package:project_hermes/model/article_catagory.dart';
 import 'package:project_hermes/widget/newsList.dart';
 import 'package:window_manager/window_manager.dart';
@@ -44,8 +44,6 @@ class _HomePageState extends State<HomePage> with WindowListener {
         title: "Health",
         iconData: FluentIcons.health,
         articleCatagory: ArticleCatagory.health),
-
-        
   ];
 
   @override
@@ -65,7 +63,6 @@ class _HomePageState extends State<HomePage> with WindowListener {
     return NavigationView(
       key: key,
       pane: NavigationPane(
-        
         selected: index,
         items: pages
             .map<NavigationPaneItem>((e) => PaneItem(

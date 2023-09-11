@@ -1,5 +1,5 @@
 import 'package:fluent_ui/fluent_ui.dart';
-import 'package:project_hermes/model/article.dart';
+import 'package:project_hermes/model/news_page.dart';
 import 'package:project_hermes/widget/newsItem.dart';
 
 class NewsListPage extends StatefulWidget {

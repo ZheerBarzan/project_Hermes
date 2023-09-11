@@ -1,7 +1,6 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:project_hermes/home_page.dart';
 import 'package:window_manager/window_manager.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,7 +10,7 @@ void main() async {
     // add google fonts add icon change color
     await windowManager.setTitle("Hermes News");
     await windowManager.setTitleBarStyle(TitleBarStyle.normal);
-    await windowManager.setBackgroundColor(Colors.transparent);
+    await windowManager.setBackgroundColor(Colors.white);
     await windowManager.setSize(const Size(755, 545));
     await windowManager.setMinimumSize(const Size(755, 545));
     await windowManager.center();
@@ -20,7 +19,6 @@ void main() async {
     await windowManager.setSkipTaskbar(false);
   });
   runApp(const MyApp());
-
 }
 
 class MyApp extends StatelessWidget {
@@ -29,16 +27,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FluentApp(
-      title: "HERMES NEWS", 
+      title: "HERMES NEWS",
       theme: FluentThemeData(
-        brightness: Brightness.light,
-        acrylicBackgroundColor: Colors.white,
-        accentColor: Colors.red
-      ),
-      darkTheme: FluentThemeData(brightness: Brightness.dark,
-      acrylicBackgroundColor: Colors.black,
-      accentColor: Colors.red
-      ),
+          brightness: Brightness.light,
+          acrylicBackgroundColor: Colors.white,
+          accentColor: Colors.red),
+      darkTheme: FluentThemeData(
+          brightness: Brightness.dark,
+          acrylicBackgroundColor: Colors.black,
+          accentColor: Colors.red),
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
     );
