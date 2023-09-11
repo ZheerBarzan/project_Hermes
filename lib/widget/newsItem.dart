@@ -1,9 +1,11 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/material.dart' as material;
+import 'package:project_hermes/model/article.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class NewsItem extends StatelessWidget {
-  const NewsItem({super.key});
+  final Article article;
+  const NewsItem({super.key, required this.article});
 
   @override
   Widget build(BuildContext context) {

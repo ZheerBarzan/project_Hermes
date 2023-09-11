@@ -25,8 +25,8 @@ class NewsApi {
       if (json['status'] == "ok") {
         final dynamic articleJSON = json['articles'] ?? [];
         final List<Article> articles = articleJSON.map<Article>((e) {
-          Article.fromJson(e);
-        });
+          return Article.fromJson(e);
+        }).toList();
         return articles;
       } else {
         throw Exception(json['messege'] ?? 'Failed to load ');
