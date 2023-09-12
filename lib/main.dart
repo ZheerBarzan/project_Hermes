@@ -15,7 +15,7 @@ void main() async {
     await windowManager.setMinimumSize(const Size(755, 545));
     await windowManager.center();
     await windowManager.show();
-    await windowManager.setIcon("");
+    await windowManager.setIcon("lib/images/hermes.png");
     await windowManager.setSkipTaskbar(false);
   });
   runApp(const MyApp());
