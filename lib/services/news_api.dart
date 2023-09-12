@@ -1,7 +1,5 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
-import 'package:http/http.dart%20';
 import 'package:project_hermes/model/article.dart';
 import 'package:project_hermes/model/article_catagory.dart';
 
