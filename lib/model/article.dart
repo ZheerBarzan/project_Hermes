@@ -27,8 +27,8 @@ class Article {
       title: json['title'] ?? "",
       url: json['url'] ?? "",
       publishedAt: DateTime.tryParse(json['publishedAt']) ?? DateTime.now(),
-      source: json['source']['name'] ?? "",
-      urlToImage: json['urlToImage'] ?? "",
+      source: json['source']['name'],
+      urlToImage: json['urlToImage'],
     );
   }
 }

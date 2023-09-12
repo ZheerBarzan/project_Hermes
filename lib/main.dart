@@ -10,7 +10,7 @@ void main() async {
     // add google fonts add icon change color
     await windowManager.setTitle("Hermes News");
     await windowManager.setTitleBarStyle(TitleBarStyle.normal);
-    await windowManager.setBackgroundColor(Colors.white);
+    await windowManager.setBackgroundColor(Colors.black);
     await windowManager.setSize(const Size(755, 545));
     await windowManager.setMinimumSize(const Size(755, 545));
     await windowManager.center();
